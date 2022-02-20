@@ -15,12 +15,23 @@
 
 """
 
-def main():
+def main(str_1, str_2):
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
-    
+    if type(str_1) !=str and type(str_2) !=str:
+        return(0)
+    elif len(str_1) == len(str_2):
+        return (1)   
+    else:
+        if str_2 == 'learn':
+           return (3)
+        else:
+            return (2)
+         
 if __name__ == "__main__":
-    main()
+    print(main(2, 1))
+    print(main('read', 'book'))
+    print(main('read', 'learn'))
+    print(main('readddd', 'book'))
